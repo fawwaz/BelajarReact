@@ -14,6 +14,22 @@ import {
   TextInput
 } from 'react-native';
 
+class JustifyContent extends Component {
+  render() {
+    return(
+      <View style={{
+        flex: 1, 
+        flexDirection:'column',
+        justifyContent:'space-between'
+      }}>
+        <View style={{width:50, height:50, backgroundColor:'powderblue'}} />
+        <View style={{width:50, height:50, backgroundColor:'skyblue'}} />
+        <View style={{width:50, height:50, backgroundColor:'steelblue'}} />
+      </View>
+    );
+  }
+}
+
 class FlexDirectionBasic extends Component {
   render() {
     return(
@@ -98,7 +114,7 @@ class belajar extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <FlexDirectionBasic />
+        <JustifyContent />
       </View>
     );
   }
