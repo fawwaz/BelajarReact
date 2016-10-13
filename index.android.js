@@ -14,6 +14,18 @@ import {
   TextInput
 } from 'react-native';
 
+class FlexDimension extends Component {
+  render() {
+    return(
+      <View style={{height: 300, width: 500}}>
+        <View style={{flex:1, backgroundColor:'powderblue'}} />
+        <View style={{flex:2, backgroundColor:'skyblue'}} />
+        <View style={{flex:3, backgroundColor:'steelblue'}} />
+      </View>
+    );
+  }
+}
+
 class FixedDimensionBasics extends Component{
   render() {
     return (
@@ -74,20 +86,7 @@ class belajar extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native Fawwaz !!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-        <Bananas />
-        <Blink text="Tes blinking apps" />
-        <LotsOfStyle />
-        <FixedDimensionBasics />
+        <FlexDimension />
       </View>
     );
   }
