@@ -14,6 +14,17 @@ import {
   TextInput
 } from 'react-native';
 
+class Bananas extends Component {
+  render() {
+    let pic = {
+        uri : 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+    }
+    return (
+      <Image source={pic} style={{width:193, height:110}} />
+    );
+  }
+}
+
 class belajar extends Component {
   render() {
     return (
@@ -28,6 +39,7 @@ class belajar extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <Bananas />
       </View>
     );
   }
