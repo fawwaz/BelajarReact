@@ -14,6 +14,20 @@ import {
   TextInput
 } from 'react-native';
 
+class LotsOfStyle extends Component{
+
+  render() {
+    return (
+      <View>
+        <Text style={styles.red}> Just Red Text</Text>
+        <Text style={styles.bigblue}>Big blue text </Text>
+        <Text style={[styles.bigblue, styles.red]}>bigblue, then red</Text>
+        <Text style={[styles.red, styles.bigblue]}>red, then bigblue</Text>
+      </View>
+    );
+  }
+}
+
 class Blink extends Component {
   constructor(props) {
     super(props);
@@ -60,6 +74,7 @@ class belajar extends Component {
         </Text>
         <Bananas />
         <Blink text="Tes blinking apps" />
+        <LotsOfStyle />
       </View>
     );
   }
@@ -82,6 +97,14 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  bigblue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  red:{
+    color: 'red',
+  }
 });
 
 AppRegistry.registerComponent('belajar', () => belajar);
